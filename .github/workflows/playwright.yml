@@ -47,3 +47,4 @@ jobs:
           echo "### Allure Report" >> $GITHUB_STEP_SUMMARY
           echo "The HTML dashboard is available as an artifact in this workflow run." >> $GITHUB_STEP_SUMMARY
           echo "- Artifact: allure-report" >> $GITHUB_STEP_SUMMARY
+          echo "- Workflow run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" >> $GITHUB_STEP_SUMMARY
