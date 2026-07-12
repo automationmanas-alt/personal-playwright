@@ -1,0 +1,11 @@
+{
+  "name": "javascript-practice",
+  "version": "0.1.0",
+  "description": "A small JavaScript practice project with basic utilities and tests.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node tests/test.js"
+  }
+}
