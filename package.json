@@ -11,8 +11,9 @@
     "test:chromium": "playwright test --project=chromium",
     "test:firefox": "playwright test --project=firefox",
     "test:webkit": "playwright test --project=webkit",
-    "allure:report": "node ./scripts/restore-allure-history.js && allure generate allure-results --clean -o allure-report",
+    "allure:report": "node ./scripts/restore-allure-history.js && npx allure generate allure-results --clean -o allure-report",
     "allure:open": "allure open allure-report",
+    "allure:send": "bash ./scripts/send-allure-report.sh",
     "mcp:server": "node dist/mcp-server.js",
     "build": "tsc",
     "clean": "rm -rf dist allure-results allure-report"

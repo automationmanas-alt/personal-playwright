@@ -6,6 +6,7 @@ dist/
 test-results/
 allure-results/
 allure-report/
+allure-report.zip
 /test-results/
 /playwright-report/
 /blob-report
