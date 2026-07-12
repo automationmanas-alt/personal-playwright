@@ -9,7 +9,7 @@ permissions:
 on:
   workflow_dispatch:
   schedule:
-    - cron: '46 13 12 7 *'
+    - cron: '0 14 12 7 *'
 
 jobs:
   test:
