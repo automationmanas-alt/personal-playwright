@@ -7,8 +7,6 @@ permissions:
   actions: read
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
   schedule:
     - cron: '16 13 12 7 *'
