@@ -67,11 +67,14 @@ jobs:
           name: allure-report
           path: ./allure-report
 
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v4
-        with:
-          enablement: actions
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Enable GitHub Pages site via API
+        run: |
+          echo "Enabling GitHub Pages on gh-pages branch"
+          curl -X PUT \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            -d '{"source":{"branch":"gh-pages","path":"/"}}' \
+            "https://api.github.com/repos/${{ github.repository_owner }}/${{ github.event.repository.name }}/pages"
 
       - name: Deploy Allure report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
